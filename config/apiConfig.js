@@ -11,12 +11,12 @@ module.exports = (() => {
     // Credentials
     THIRD_PARTY_USERNAME: process.env.THIRD_PARTY_USERNAME || "s23hana1", //"ims113"
     THIRD_PARTY_PASSWORD: process.env.THIRD_PARTY_PASSWORD || "Sh@rv!0001", //"Sh@rv1511",
-
     
 
     // API Calls
-    THIRD_PARTY_API_URL_POST_LOGIN: `${login}/login/create?sap-client=234`,
+    THIRD_PARTY_API_URL_POST_LOGIN: `${login}/sipl_pp/pp_login/create?sap-client=100`,
     // THIRD_PARTY_API_URL_POST_LOGIN: `${baseUrl}/login/create?sap-client=234
-    ThirdParty_COOISOperations: `${baseUrl}/sipl_pp/coois/porder?sap-client=100`,
+    ThirdParty_COOISOperations_POST: `${baseUrl}/sipl_pp/coois/porder?sap-client=100`,
+    ThirdParty_DataEntry_POST: `${baseUrl}/sipl_pp/data_entry/create?sap-client=100`,
   };
 })();

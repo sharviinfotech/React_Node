@@ -9,7 +9,6 @@ module.exports = (() => {
     machineSensorupdate: (req, res) => externalApiMethods.machinesensorUpdate(req.body, res),
     machinesensorlist: (req, res) => externalApiMethods.machinesensorList(req.body, res),
     globalDelete: (req, res) => externalApiMethods.deleteGlobally(req.body, res),
-    cooisOperation: (req, res) => externalApiMethods.getProductionPlanning(req.body, res),
 
     ppSave: (req, res) => externalApiMethods.productionPlanningSave(req, res),
     ppGet: (req, res) => externalApiMethods.getListOfPP(req, res),
@@ -20,6 +19,9 @@ module.exports = (() => {
     submitLogin: (req, res) => externalApiMethods.userLogin(req, res),
      reset: (req, res) => externalApiMethods.resetPassword(req, res),
      forgot: (req, res) => externalApiMethods.forgotPassword(req, res),
-     
+
+     cooisOperation: (req, res) => externalApiMethods.getProductionPlanning(req.body, res),
+     submitLoginSap: (req, res) => externalApiMethods.submitLoginSap(req.body, res),
+     saveDataEntry:(req, res) => externalApiMethods.saveDataEntry(req.body, res),
   };
 })();

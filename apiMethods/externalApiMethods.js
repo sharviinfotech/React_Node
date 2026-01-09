@@ -255,7 +255,57 @@ module.exports = (() => {
           JSON.stringify(body, null, 2)
         );
         const response = await sapAxios.post(
-          config.ThirdParty_COOISOperations,
+          config.ThirdParty_COOISOperations_POST,
+          body,
+          {
+            headers: {
+              Authorization: getAuthHeader()
+            }
+          }
+        );
+        console.log(
+          "coois operations:",
+          JSON.stringify(response.data, null, 2)
+        );
+        res.json(response.data);
+      } catch (error) {
+        handleAxiosError(error, "coois operations");
+        res.status(500).json({ error: "Failed to process Post request" });
+      }
+    },
+    submitLoginSap: async (body, res) => {
+      try {
+        console.log(
+          "cooisoperation",
+          JSON.stringify(body, null, 2)
+        );
+        const response = await sapAxios.post(
+          config.THIRD_PARTY_API_URL_POST_LOGIN,
+          body,
+          {
+            headers: {
+              Authorization: getAuthHeader()
+            }
+          }
+        );
+        console.log(
+          "coois operations:",
+          JSON.stringify(response.data, null, 2)
+        );
+        res.json(response.data);
+      } catch (error) {
+        handleAxiosError(error, "coois operations");
+        res.status(500).json({ error: "Failed to process Post request" });
+      }
+    },
+    saveDataEntry: async (body, res) => {
+      try {
+        console.log(
+          "cooisoperation",
+          JSON.stringify(body, null, 2)
+        );
+        const response = await sapAxios.post(
+          config.ThirdParty_DataEntry_POST,
           body,
           {
             headers: {

@@ -25,7 +25,7 @@ connectDB();
 
 // Server Initialization
 const BASE_SERVER_URL = 'http://localhost'
-const BASE_PORT = 3001
+const BASE_PORT = 3002
 app.listen(BASE_PORT, () =>
     console.log(`🚀 Server running on ${BASE_SERVER_URL}:${BASE_PORT}`)
 );
